@@ -1,0 +1,252 @@
+vpikalova@asus:~$ python3 --version  
+Python 3.4.3
+vpikalova@asus:~$ python -- version
+python: can't open file 'version': [Errno 2] No such file or directory
+vpikalova@asus:~$ python --version 
+Python 2.7.9 --  64-bit 
+vpikalova@asus:~$ mkdir djangogirls
+vpikalova@asus:~$ cd djangogirls      
+vpikalova@asus:~/djangogirls$ python3 -m venv myvenv
+Error: Command '['/home/vpikalova/djangogirls/myvenv/bin/python3', '-Im', 'ensurepip', '--upgrade', '--default-pip']' returned non-zero exit status 1
+vpikalova@asus:~/djangogirls$ sudo apt-get install python-virtualenv
+[sudo] password for vpikalova: 
+Чтение списков пакетов… Готово
+Построение дерева зависимостей       
+Чтение информации о состоянии… Готово
+Некоторые пакеты невозможно установить. Возможно, вы просите невозможного,
+или же используете нестабильную версию дистрибутива, где запрошенные вами
+пакеты ещё не созданы или были удалены из Incoming.
+Следующая информация, возможно, поможет вам:
+
+Пакеты, имеющие неудовлетворённые зависимости:
+ python-virtualenv : Зависит: python-setuptools но он не будет установлен
+                     Рекомендует: python-pip (>= 0.7.2) но он не будет установлен
+E: Невозможно исправить ошибки, у вас отложены (held) битые пакеты.
+vpikalova@asus:~/djangogirls$ virtualenv --python=python3.4 myvenv
+Программа 'virtualenv' на данный момент не установлена. Вы можете установить её, выполнив:
+sudo apt-get install python-virtualenv
+vpikalova@asus:~/djangogirls$ sudo apt-get install python-virtualenv
+Чтение списков пакетов… Готово
+Построение дерева зависимостей       
+Чтение информации о состоянии… Готово
+Некоторые пакеты невозможно установить. Возможно, вы просите невозможного,
+или же используете нестабильную версию дистрибутива, где запрошенные вами
+пакеты ещё не созданы или были удалены из Incoming.
+Следующая информация, возможно, поможет вам:
+
+Пакеты, имеющие неудовлетворённые зависимости:
+ python-virtualenv : Зависит: python-setuptools но он не будет установлен
+                     Рекомендует: python-pip (>= 0.7.2) но он не будет установлен
+E: Невозможно исправить ошибки, у вас отложены (held) битые пакеты.
+vpikalova@asus:~/djangogirls$ sudo apt-get install python-pip
+Чтение списков пакетов… Готово
+Построение дерева зависимостей       
+Чтение информации о состоянии… Готово
+Некоторые пакеты невозможно установить. Возможно, вы просите невозможного,
+или же используете нестабильную версию дистрибутива, где запрошенные вами
+пакеты ещё не созданы или были удалены из Incoming.
+Следующая информация, возможно, поможет вам:
+
+Пакеты, имеющие неудовлетворённые зависимости:
+ python-pip : Зависит: python-pip-whl (= 1.5.4-1ubuntu3) но он не будет установлен
+              Зависит: python-setuptools (>= 0.6c1) но он не будет установлен
+              Рекомендует: python-dev-all (>= 2.6) но он не может быть установлен
+              Рекомендует: python-wheel но он не может быть установлен
+E: Невозможно исправить ошибки, у вас отложены (held) битые пакеты.
+vpikalova@asus:~/djangogirls$ -m pip install -U --force-reinstall pip
+-m: команда не найдена
+vpikalova@asus:~/djangogirls$ python -m pip install -U --force-reinstall pip
+You are using pip version 7.0.3, however version 8.0.3 is available.
+You should consider upgrading via the 'pip install --upgrade pip' command.        
+Collecting pip
+  Downloading pip-8.0.3-py2.py3-none-any.whl (1.2MB)
+    100% |████████████████████████████████| 1.2MB 153kB/s 
+Installing collected packages: pip
+  Found existing installation: pip 7.0.3
+    Uninstalling pip-7.0.3:
+      Successfully uninstalled pip-7.0.3
+Successfully installed pip-8.0.3
+vpikalova@asus:~/djangogirls$ sudo apt-get install python-virtualenv        
+Чтение списков пакетов… Готово
+Построение дерева зависимостей       
+Чтение информации о состоянии… Готово
+Некоторые пакеты невозможно установить. Возможно, вы просите невозможного,
+или же используете нестабильную версию дистрибутива, где запрошенные вами
+пакеты ещё не созданы или были удалены из Incoming.
+Следующая информация, возможно, поможет вам:
+
+Пакеты, имеющие неудовлетворённые зависимости:
+ python-virtualenv : Зависит: python-setuptools но он не будет установлен
+                     Рекомендует: python-pip (>= 0.7.2) но он не будет установлен
+E: Невозможно исправить ошибки, у вас отложены (held) битые пакеты.
+vpikalova@asus:~/djangogirls$ ^C
+vpikalova@asus:~/djangogirls$ sudo apt-get install git
+Чтение списков пакетов… Готово
+Построение дерева зависимостей       
+Чтение информации о состоянии… Готово
+Уже установлена самая новая версия git.
+git установлен вручную.
+Следующие пакеты устанавливались автоматически и больше не требуются:
+  libgsl0ldbl libmpdec2 linux-headers-3.13.0-36
+  linux-headers-3.13.0-36-generic linux-image-3.13.0-36-generic
+  linux-image-extra-3.13.0-36-generic
+Для их удаления используйте «apt-get autoremove».
+обновлено 0, установлено 0 новых пакетов, для удаления отмечено 0 пакетов, и 17 пакетов не обновлено.
+vpikalova@asus:~/djangogirls$ sudo apt-get install python-virtualenvwrapper
+Чтение списков пакетов… Готово
+Построение дерева зависимостей       
+Чтение информации о состоянии… Готово
+E: Не удалось найти пакет python-virtualenvwrapper
+vpikalova@asus:~/djangogirls$ pip install django==1.8
+Collecting django==1.8
+  Downloading Django-1.8-py2.py3-none-any.whl (6.2MB)
+    100% |████████████████████████████████| 6.2MB 39kB/s 
+Installing collected packages: django
+Successfully installed django-1.8
+vpikalova@asus:~/djangogirls$ pip install django==1.8
+Requirement already satisfied (use --upgrade to upgrade): django==1.8 in /home/vpikalova/Enthought/Canopy_32bit/User/lib/python2.7/site-packages
+vpikalova@asus:~/djangogirls$ source myvenv/bin/activate
+bash: myvenv/bin/activate: Нет такого файла или каталога
+vpikalova@asus:~/djangogirls$ virtualenv --python=python3.4 myvenv
+Программа 'virtualenv' на данный момент не установлена. Вы можете установить её, выполнив:
+sudo apt-get install python-virtualenv
+vpikalova@asus:~/djangogirls$ sudo apt-get install python-virtualenv
+Чтение списков пакетов… Готово
+Построение дерева зависимостей       
+Чтение информации о состоянии… Готово
+Некоторые пакеты невозможно установить. Возможно, вы просите невозможного,
+или же используете нестабильную версию дистрибутива, где запрошенные вами
+пакеты ещё не созданы или были удалены из Incoming.
+Следующая информация, возможно, поможет вам:
+
+Пакеты, имеющие неудовлетворённые зависимости:
+ python-virtualenv : Зависит: python-setuptools но он не будет установлен
+                     Рекомендует: python-pip (>= 0.7.2) но он не будет установлен
+E: Невозможно исправить ошибки, у вас отложены (held) битые пакеты.
+vpikalova@asus:~/djangogirls$ sudo apt-get install python-setuptools       
+Чтение списков пакетов… Готово
+Построение дерева зависимостей       
+Чтение информации о состоянии… Готово
+Некоторые пакеты невозможно установить. Возможно, вы просите невозможного,
+или же используете нестабильную версию дистрибутива, где запрошенные вами
+пакеты ещё не созданы или были удалены из Incoming.
+Следующая информация, возможно, поможет вам:
+
+Пакеты, имеющие неудовлетворённые зависимости:
+ python-setuptools : Зависит: python-pkg-resources (= 3.3-1ubuntu1) но 3.3-1ubuntu2 будет установлен
+E: Невозможно исправить ошибки, у вас отложены (held) битые пакеты.
+vpikalova@asus:~/djangogirls$ sudo apt-get install python-pkg-resorces
+Чтение списков пакетов… Готово
+Построение дерева зависимостей       
+Чтение информации о состоянии… Готово
+E: Не удалось найти пакет python-pkg-resorces
+vpikalova@asus:~/djangogirls$ myvenv/bin/activate
+bash: myvenv/bin/activate: Нет такого файла или каталога
+vpikalova@asus:~/djangogirls$ sudo pip install https://github.com/pypa/virtualenv/tarball/1.1.X
+sudo: pip: command not found
+vpikalova@asus:~/djangogirls$ sudo pip install virtualenv
+sudo: pip: command not found
+vpikalova@asus:~/djangogirls$ sudo easy_install virtualenv
+sudo: easy_install: command not found
+vpikalova@asus:~/djangogirls$ sudo apt-get install python-virtualenv
+Чтение списков пакетов… Готово
+Построение дерева зависимостей       
+Чтение информации о состоянии… Готово
+Некоторые пакеты невозможно установить. Возможно, вы просите невозможного,
+или же используете нестабильную версию дистрибутива, где запрошенные вами
+пакеты ещё не созданы или были удалены из Incoming.
+Следующая информация, возможно, поможет вам:
+
+Пакеты, имеющие неудовлетворённые зависимости:
+ python-virtualenv : Зависит: python-setuptools но он не будет установлен
+                     Рекомендует: python-pip (>= 0.7.2) но он не будет установлен
+E: Невозможно исправить ошибки, у вас отложены (held) битые пакеты.
+vpikalova@asus:~/djangogirls$ sudo python-pip install https://github.com/pypa/virtualenv/tarball/1.1.X
+sudo: python-pip: command not found
+vpikalova@asus:~/djangogirls$ python3 -m venv myvenv
+Error: Command '['/home/vpikalova/djangogirls/myvenv/bin/python3', '-Im', 'ensurepip', '--upgrade', '--default-pip']' returned non-zero exit status 1
+vpikalova@asus:~/djangogirls$ virtualenv --python=python3.4 myvenv
+Программа 'virtualenv' на данный момент не установлена. Вы можете установить её, выполнив:
+sudo apt-get install python-virtualenv
+vpikalova@asus:~/djangogirls$ sudo apt-get install python-virtualenv              Чтение списков пакетов… Готово
+Построение дерева зависимостей       
+Чтение информации о состоянии… Готово
+Некоторые пакеты невозможно установить. Возможно, вы просите невозможного,
+или же используете нестабильную версию дистрибутива, где запрошенные вами
+пакеты ещё не созданы или были удалены из Incoming.
+Следующая информация, возможно, поможет вам:
+
+Пакеты, имеющие неудовлетворённые зависимости:
+ python-virtualenv : Зависит: python-setuptools но он не будет установлен
+                     Рекомендует: python-pip (>= 0.7.2) но он не будет установлен
+E: Невозможно исправить ошибки, у вас отложены (held) битые пакеты.
+vpikalova@asus:~/djangogirls$ sudo python-pip install https://github.com/pypa/virtualenv/tarball/1.1.X
+sudo: python-pip: command not found
+vpikalova@asus:~/djangogirls$ python -m pip install -U --force-reinstall pip
+Collecting pip
+  Using cached pip-8.0.3-py2.py3-none-any.whl
+Installing collected packages: pip
+  Found existing installation: pip 8.0.3
+    Uninstalling pip-8.0.3:
+      Successfully uninstalled pip-8.0.3
+Successfully installed pip-8.0.3
+vpikalova@asus:~/djangogirls$ sudo python-pip install https://github.com/pypa/virtualenv/tarball/1.1.X
+sudo: python-pip: command not found
+vpikalova@asus:~/djangogirls$ pyversions -d
+python2.7
+vpikalova@asus:~/djangogirls$ sudo easy_install -U pip
+sudo: easy_install: command not found
+vpikalova@asus:~/djangogirls$ python get-pip.py
+python: can't open file 'get-pip.py': [Errno 2] No such file or directory
+vpikalova@asus:~/djangogirls$ sudo apt-get install python3-venv
+Чтение списков пакетов… Готово
+Построение дерева зависимостей       
+Чтение информации о состоянии… Готово
+E: Не удалось найти пакет python3-venv
+vpikalova@asus:~/djangogirls$ python3 pyvenvex.py yourenv
+Installing setuptools ....................................................................................................................................................................................................................................................done.
+Installing pip ....done.
+vpikalova@asus:~/djangogirls$ source yourenv/bin/activate
+(yourenv) vpikalova@asus:~/djangogirls$ pip install django
+Программа 'pip' на данный момент не установлена. Вы можете установить её, выполнив:
+sudo apt-get install python-pip
+(yourenv) vpikalova@asus:~/djangogirls$ python3 -m venv myvenv                    Error: Command '['/home/vpikalova/djangogirls/myvenv/bin/python3', '-Im', 'ensurepip', '--upgrade', '--default-pip']' returned non-zero exit status 1
+(yourenv) vpikalova@asus:~/djangogirls$ which pip
+(yourenv) vpikalova@asus:~/djangogirls$ which pip
+(yourenv) vpikalova@asus:~/djangogirls$ yourenv/bin/activate
+bash: yourenv/bin/activate: Отказано в доступе
+(yourenv) vpikalova@asus:~/djangogirls$ вуфсешмфеуdeactivate
+вуфсешмфеуdeactivate: команда не найдена
+(yourenv) vpikalova@asus:~/djangogirls$ deactivate
+vpikalova@asus:~/djangogirls$ source yourenv/bin/activate
+(yourenv) vpikalova@asus:~/djangogirls$ which pip
+(yourenv) vpikalova@asus:~/djangogirls$ deactivate
+vpikalova@asus:~/djangogirls$ python3 pyvenvex.py myvenv 
+Installing setuptools ....................................................................................................................................................................................................................................................done.
+Installing pip ....done.
+vpikalova@asus:~/djangogirls$ source myvenv/bin/activate 
+(myvenv) vpikalova@asus:~/djangogirls$ pip install django==1.8
+Программа 'pip' на данный момент не установлена. Вы можете установить её, выполнив:
+sudo apt-get install python-pip
+(myvenv) vpikalova@asus:~/djangogirls$ python -m pip install -U --force-reinstall pip
+/home/vpikalova/djangogirls/myvenv/bin/python: No module named pip
+(myvenv) vpikalova@asus:~/djangogirls$ which pip
+(myvenv) vpikalova@asus:~/djangogirls$ which python
+/home/vpikalova/djangogirls/myvenv/bin/python
+(myvenv) vpikalova@asus:~/djangogirls$ python -V
+Python 3.4.3
+(myvenv) vpikalova@asus:~/djangogirls$ python3 get-pip.py
+Collecting pip
+  Using cached pip-8.0.3-py2.py3-none-any.whl
+Collecting wheel
+  Downloading wheel-0.29.0-py2.py3-none-any.whl (66kB)
+    100% |████████████████████████████████| 69kB 399kB/s 
+Installing collected packages: pip, wheel
+Successfully installed pip-8.0.3 wheel-0.29.0
+(myvenv) vpikalova@asus:~/djangogirls$ which pip
+/home/vpikalova/djangogirls/myvenv/bin/pip
+(myvenv) vpikalova@asus:~/djangogirls$ pip install django==1.8Collecting django==1.8
+  Using cached Django-1.8-py2.py3-none-any.whl
+Installing collected packages: django
+Successfully installed django-1.8
+(myvenv) vpikalova@asus:~/djangogirls$ 

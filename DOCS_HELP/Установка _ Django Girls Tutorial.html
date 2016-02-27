@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<!-- saved from url=(0058)http://tutorial.djangogirls.org/ru/installation/index.html -->
+<html lang="ru"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Установка | Django Girls Tutorial</title>
+        
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.1.0">
+        <meta name="author" content="DjangoGirls">
+        
+    <link rel="stylesheet" href="./install/style.css">
+    
+        
+        <link rel="stylesheet" href="./install/plugin.css">
+        
+    
+        
+        <link rel="stylesheet" href="./install/plugin(1).css">
+        
+    
+        
+        <link rel="stylesheet" href="./install/plugin(2).css">
+        
+    
+    
+
+        
+    
+    
+        
+    </head>
+    <body>
+        
+        
+    <div class="book without-animation with-summary font-size-2 font-family-1" data-level="1" data-basepath=".." data-revision="Wed Sep 30 2015 07:10:25 GMT+0000 (UTC)">
+    
+
+
+
+    <div class="book-body">
+        <div class="body-inner">
+            
+
+            <div class="page-wrapper" tabindex="-1">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        
+
+
+
+
+<h1 id="%D1%83%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BA%D0%B0"><a name="%D1%83%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BA%D0%B0" class="plugin-anchor" href="http://tutorial.djangogirls.org/ru/installation/index.html#%D1%83%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BA%D0%B0"><span class="fa fa-link"></span></a>Установка</h1>
+<p>В процессе мастер-класса мы будем создавать блог и у нас есть несколько подготовительных задач по установке, которые не помешало бы выполнить заранее, чтобы тебе не пришлось отвлекаться от программирования.</p>
+<h1 id="%D1%83%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BA%D0%B0-python"><a name="%D1%83%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BA%D0%B0-python" class="plugin-anchor" href="http://tutorial.djangogirls.org/ru/installation/index.html#%D1%83%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BA%D0%B0-python"><span class="fa fa-link"></span></a>Установка Python</h1>
+<blockquote>
+<p>Этот подраздел основан на руководстве Geek Girls Carrots (<a href="http://django.carrots.pl/" target="_blank">http://django.carrots.pl/</a>)</p>
+</blockquote>
+<p>Django написан на Python. Нам нужен Python, чтобы сделать что-нибудь в Django. Давай начнем с его установки! Мы хотим, чтобы ты установила Python 3.4, поэтому, если у тебя уже есть более ранняя версия, то её придется обновить.</p>
+<h3 id="windows"><a name="windows" class="plugin-anchor" href="http://tutorial.djangogirls.org/ru/installation/index.html#windows"><span class="fa fa-link"></span></a>Windows</h3>
+<p>Ты можешь загрузить Python для Windows с официального веб-сайта: <a href="https://www.python.org/downloads/release/python-343/" target="_blank">https://www.python.org/downloads/release/python-343/</a>. После загрузки <strong>*.msi</strong> файла, ты должна запустить его (двойной щелчок) и следовать инструкциям. Важно помнить путь (каталог), куда ты установила Python. Это понадобится позже!</p>
+<p>Обрати внимание на второй экран мастера установки, который называется "Customize" (Настройка): тебе нужно пролистать его вниз и выбрать опцию "Add python.exe to the Path" (Добавить python.exe к системной переменной Path), как на рисунке:</p>
+<p><img src="./install/add_python_to_windows_path.png" alt="Не забудьте добавить Python в системную переменную Path"></p>
+<h3 id="linux"><a name="linux" class="plugin-anchor" href="http://tutorial.djangogirls.org/ru/installation/index.html#linux"><span class="fa fa-link"></span></a>Linux</h3>
+<p>Вполне вероятно, что у тебя уже установлен Python. Чтобы проверить это (а также версию языка), открой консоль и введи следующую команду:</p>
+<pre><code>$ python3 --version
+Python 3.4.3
+</code></pre><p>Если Python не установлен, или ты хочешь использовать другую версию языка, то можешь установить его следующим образом:</p>
+<h4 id="debian-%D0%B8%D0%BB%D0%B8-ubuntu"><a name="debian-%D0%B8%D0%BB%D0%B8-ubuntu" class="plugin-anchor" href="http://tutorial.djangogirls.org/ru/installation/index.html#debian-%D0%B8%D0%BB%D0%B8-ubuntu"><span class="fa fa-link"></span></a>Debian или Ubuntu</h4>
+<p>Введи эту команду в консоль:</p>
+<pre><code>$ sudo apt-get install python3.4
+</code></pre><h4 id="fedora-%D0%B2%D0%B5%D1%80%D1%81%D0%B8%D0%B8-%D0%B2%D0%BF%D0%BB%D0%BE%D1%82%D1%8C-%D0%B4%D0%BE-21"><a name="fedora-%D0%B2%D0%B5%D1%80%D1%81%D0%B8%D0%B8-%D0%B2%D0%BF%D0%BB%D0%BE%D1%82%D1%8C-%D0%B4%D0%BE-21" class="plugin-anchor" href="http://tutorial.djangogirls.org/ru/installation/index.html#fedora-%D0%B2%D0%B5%D1%80%D1%81%D0%B8%D0%B8-%D0%B2%D0%BF%D0%BB%D0%BE%D1%82%D1%8C-%D0%B4%D0%BE-21"><span class="fa fa-link"></span></a>Fedora (версии вплоть до 21)</h4>
+<p>Используй следующую команду в консоли:</p>
+<pre><code>$ sudo yum install python3.4
+</code></pre><h4 id="fedora-%D0%B2%D0%B5%D1%80%D1%81%D0%B8%D0%B8-22-%D0%B8-%D0%B2%D1%8B%D1%88%D0%B5"><a name="fedora-%D0%B2%D0%B5%D1%80%D1%81%D0%B8%D0%B8-22-%D0%B8-%D0%B2%D1%8B%D1%88%D0%B5" class="plugin-anchor" href="http://tutorial.djangogirls.org/ru/installation/index.html#fedora-%D0%B2%D0%B5%D1%80%D1%81%D0%B8%D0%B8-22-%D0%B8-%D0%B2%D1%8B%D1%88%D0%B5"><span class="fa fa-link"></span></a>Fedora (версии 22 и выше)</h4>
+<p>Используй следующую команду в консоли:</p>
+<pre><code>$ sudo dnf install python3.4
+</code></pre><h3 id="os-x"><a name="os-x" class="plugin-anchor" href="http://tutorial.djangogirls.org/ru/installation/index.html#os-x"><span class="fa fa-link"></span></a>OS X</h3>
+<p>Тебе нужно перейти по ссылке <a href="https://www.python.org/downloads/release/python-342/" target="_blank">https://www.python.org/downloads/release/python-342/</a> и скачать дистрибутив Python:</p>
+<ul>
+<li>Скачай файл <em>Mac OS X 64-bit/32-bit installer</em>,</li>
+<li>Сделай двойной щелчок на <em>python-3.4.3-macosx10.6.pkg</em> для запуска установщика.</li>
+</ul>
+<p>Убедись, что установка прошла успешно, открыв приложение <em>Терминал</em> и запустив команду <code>python3</code>:</p>
+<pre><code>$ python3 --version
+Python 3.4.3
+</code></pre><hr>
+<p>Если у тебя остались какие-либо сомнения, или что-то пошло не так и ты понятия не имеешь что делать дальше - спроси своего тренера! Иногда дела идут не совсем гладко, поэтому лучше попросить помощи у кого-то с большим опытом.</p>
+<h1 id="%D0%BD%D0%B0%D1%81%D1%82%D1%80%D0%BE%D0%BA%D0%B0-virtualenv-%D0%B8-%D1%83%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BA%D0%B0-django"><a name="%D0%BD%D0%B0%D1%81%D1%82%D1%80%D0%BE%D0%BA%D0%B0-virtualenv-%D0%B8-%D1%83%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BA%D0%B0-django" class="plugin-anchor" href="http://tutorial.djangogirls.org/ru/installation/index.html#%D0%BD%D0%B0%D1%81%D1%82%D1%80%D0%BE%D0%BA%D0%B0-virtualenv-%D0%B8-%D1%83%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BA%D0%B0-django"><span class="fa fa-link"></span></a>Настрока virtualenv и установка Django</h1>
+<blockquote>
+<p>Отдельные части этой главы основаны на учебных пособиях Geek Girls Carrots (<a href="http://django.carrots.pl/" target="_blank">http://django.carrots.pl/</a>).</p>
+<p>Отдельные части этой главы основаны на <a href="http://django-marcador.keimlink.de/" target="_blank">учебном пособии django-marcador</a>, лицензированном под Creative Commons Attribution-ShareAlike 4.0 International License. Руководство django-marcador защищено авторским правом Markus Zapke-Gründemann et al.</p>
+</blockquote>
+<h2 id="%D0%B2%D0%B8%D1%80%D1%82%D1%83%D0%B0%D0%BB%D1%8C%D0%BD%D0%BE%D0%B5-%D0%BE%D0%BA%D1%80%D1%83%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5"><a name="%D0%B2%D0%B8%D1%80%D1%82%D1%83%D0%B0%D0%BB%D1%8C%D0%BD%D0%BE%D0%B5-%D0%BE%D0%BA%D1%80%D1%83%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5" class="plugin-anchor" href="http://tutorial.djangogirls.org/ru/installation/index.html#%D0%B2%D0%B8%D1%80%D1%82%D1%83%D0%B0%D0%BB%D1%8C%D0%BD%D0%BE%D0%B5-%D0%BE%D0%BA%D1%80%D1%83%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5"><span class="fa fa-link"></span></a>Виртуальное окружение</h2>
+<p>Перед установкой Django мы попросим тебя установить крайне полезный инструмент, который поможет тебе содержать среду разработки в чистоте. Можно пропустить этот шаг, но мы очень советуем этого не делать. Использование лучших рекомендаций с самого начала убережёт от многих проблем в будущем!</p>
+<p>Итак, давай создадим <strong>виртуальное окружение</strong> (оно также называется <em>virtualenv</em>). Virtualenv будет изолировать зависимости Python/Django для каждого отдельного проекта. Это значит, что изменения одного сайта никогда не затронут другие сайты, которые вы разрабатываете. Удобно, правда?</p>
+<p>Все что тебе нужно сделать -- найти директорию, в которой мы создадим <code>virtualenv</code>; домашний каталог вполне подойдет. Для Windows адрес будет выглядеть так: <code>C:\Users\Name</code> (где <code>Name</code> твое имя пользователя).</p>
+<p>Мы будем использовать отдельную директорию <code>djangogirls</code> в домашнем каталоге:</p>
+<pre><code>mkdir djangogirls
+cd djangogirls
+</code></pre><p>Мы создадим виртуальное окружение под именем <code>myvenv</code>. В общем случаем команда будет выглядеть так:</p>
+<pre><code>python3 -m venv myvenv
+</code></pre><h3 id="windows"><a name="windows" class="plugin-anchor" href="http://tutorial.djangogirls.org/ru/installation/index.html#windows"><span class="fa fa-link"></span></a>Windows</h3>
+<p>Чтобы создать новое <code>virtualenv</code>, тебе нужно открыть командную строку (мы рассказывали про неё в одной из прошлых глав - помнишь?) и набрать <code>C:\Python34\python -m venv myvenv</code>. Он должен содержать следующее:</p>
+<pre><code>C:\Users\Name\djangogirls&gt; C:\Python34\python -m venv myvenv
+</code></pre><p>где <code>C:\Python34\python</code> это директория, где ты установила Python и <code>myvenv</code> имя твоего <code>virtualenv</code>. Ты можешь выбрать любое имя, использовать можно только прописные буквы, без пробелов и специальных символов. Имя виртуального окружения выбирай покороче!</p>
+<h3 id="linux-and-os-x"><a name="linux-and-os-x" class="plugin-anchor" href="http://tutorial.djangogirls.org/ru/installation/index.html#linux-and-os-x"><span class="fa fa-link"></span></a>Linux and OS X</h3>
+<p>Для Linux и OS X достаточно набрать <code>python3 -m venv myvenv</code>, чтобы создать <code>virtualenv</code>:</p>
+<pre><code>~/djangogirls$ python3 -m venv myvenv
+</code></pre><p><code>myvenv</code> -- имя виртуального окружения <code>virtualenv</code>. Опять же, только строчные буквы и никаких пробелов. Имя виртуального окружения лучше выбирать покороче — его набирать его предстоит не раз!</p>
+<blockquote>
+<p><strong>ПРИМЕЧАНИЕ:</strong> создание виртуального окружения данной командой на Ubuntu 14.04 приведет к следующей ошибке:</p>
+<pre><code>Error: Command '['/home/eddie/Slask/tmp/venv/bin/python3', '-Im', 'ensurepip', '--upgrade', '--default-pip']' returned non-zero exit status 1
+</code></pre><p>Чтобы обойти эту проблему используй команду <code>virtualenv</code>.</p>
+<pre><code>~/djangogirls$ sudo apt-get install python-virtualenv
+~/djangogirls$ virtualenv --python=python3.4 myvenv
+</code></pre></blockquote>
+<h2 id="%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%D0%B5%D0%BC-%D1%81-virtualenv"><a name="%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%D0%B5%D0%BC-%D1%81-virtualenv" class="plugin-anchor" href="http://tutorial.djangogirls.org/ru/installation/index.html#%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%D0%B5%D0%BC-%D1%81-virtualenv"><span class="fa fa-link"></span></a>Работаем с virtualenv</h2>
+<p>Вышеуказанная команда создаст директорию <code>myvenv</code> (или другую, в зависимости от выбранного имени), которая будет содержать виртуальное окружение (по сути -- набор файлов и папок).</p>
+<h4 id="windows"><a name="windows" class="plugin-anchor" href="http://tutorial.djangogirls.org/ru/installation/index.html#windows"><span class="fa fa-link"></span></a>Windows</h4>
+<p>Запусти виртуальное окружение, выполнив:</p>
+<pre><code>C:\Users\Name\djangogirls&gt; myvenv\Scripts\activate
+</code></pre><h4 id="linux-and-os-x"><a name="linux-and-os-x" class="plugin-anchor" href="http://tutorial.djangogirls.org/ru/installation/index.html#linux-and-os-x"><span class="fa fa-link"></span></a>Linux and OS X</h4>
+<p>Запусти виртуальное окружение, выполнив:</p>
+<pre><code>~/djangogirls$ source myvenv/bin/activate
+</code></pre><p>Не забудь поменять <code>myvenv</code> на выбранное для <code>virtualenv</code> имя!</p>
+<blockquote>
+<p><strong>ПРИМЕЧАНИЕ:</strong> иногда команда <code>source</code> может быть недоступна. В таком случае, используй следующий метод:</p>
+<pre><code>~/djangogirls$ . myvenv/bin/activate
+</code></pre></blockquote>
+<p>Ты поймешь, что <code>virtualenv</code> запущено, когда увидишь приписку в командной строке:</p>
+<pre><code>(myvenv) C:\Users\Name\djangogirls&gt;
+</code></pre><p>или:</p>
+<pre><code>(myvenv) ~/djangogirls$
+</code></pre><p>Обрати внимание на появление префикса <code>(myvenv)</code>!</p>
+<p>При работе с виртуальным окружением, команда <code>python</code> будет автоматически обращаться к правильной версии языка, так что тебе не обязательно использовать <code>python3</code>.</p>
+<p>Отлично, теперь мы будем хранить все важные зависимости в одном месте. Наконец можно установить Django!</p>
+<h2 id="%D1%83%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BA%D0%B0-django"><a name="%D1%83%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BA%D0%B0-django" class="plugin-anchor" href="http://tutorial.djangogirls.org/ru/installation/index.html#%D1%83%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BA%D0%B0-django"><span class="fa fa-link"></span></a>Установка Django</h2>
+<p>После запуска <code>virtualenv</code> ты можешь установить Django используя <code>pip</code>. Набери в командной строке строке <code>pip install django==1.8</code> (обрати внимание на двойной знак равенства: <code>==</code>).</p>
+<pre><code>(myvenv) ~$ pip install django==1.8
+Downloading/unpacking django==1.8
+Installing collected packages: django
+Successfully installed django
+Cleaning up...
+</code></pre><p>для Windows</p>
+<blockquote>
+<p>Если ты получаешь сообщение об ошибке при запуске pip, проверь что путь к директории с проектом не содержит пробелы или специальные символы (<code>C:\Users\User Name\djangogirls</code>). Если проблема в этом, то, пожалуйста, перенеси свой проект в другое место, адрес которого не будет содержать пробелы и специальные символы (предложение: <code>C:\djangogirls</code>). После этого еще раз попробуй запустить pip.</p>
+</blockquote>
+<p>для Linux</p>
+<blockquote>
+<p>При возникновении ошибки при вызове pip под Ubuntu 12.04, пожалуйста, запусти <code>python -m pip install -U --force-reinstall pip</code>, чтобы исправить установку pip в virtualenv.</p>
+</blockquote>
+<p>Вот и оно! Теперь ты (наконец то) готова создать свое Django приложение!</p>
+<h1 id="%D1%83%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BA%D0%B0-%D1%80%D0%B5%D0%B4%D0%B0%D0%BA%D1%82%D0%BE%D1%80%D0%B0-%D0%BA%D0%BE%D0%B4%D0%B0"><a name="%D1%83%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BA%D0%B0-%D1%80%D0%B5%D0%B4%D0%B0%D0%BA%D1%82%D0%BE%D1%80%D0%B0-%D0%BA%D0%BE%D0%B4%D0%B0" class="plugin-anchor" href="http://tutorial.djangogirls.org/ru/installation/index.html#%D1%83%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BA%D0%B0-%D1%80%D0%B5%D0%B4%D0%B0%D0%BA%D1%82%D0%BE%D1%80%D0%B0-%D0%BA%D0%BE%D0%B4%D0%B0"><span class="fa fa-link"></span></a>Установка редактора кода</h1>
+<p>Существует много различных редакторов и в основном все сводится к личным предпочтениям. Большинство Python программистов используют сложные, но чрезвычайно мощные IDE (англ. Integrated Development Environments - Интегрированные среды разработки), такие как PyCharm. Однако они, вероятно, не очень подходят для начинающих; мы предлагаем столь же мощные, но куда более простые варианты.</p>
+<p>Ниже приведен перечень наших предпочтений, но также можешь попросить совета у своего тренера - будет проще получить помощь от него.</p>
+<h2 id="gedit"><a name="gedit" class="plugin-anchor" href="http://tutorial.djangogirls.org/ru/installation/index.html#gedit"><span class="fa fa-link"></span></a>Gedit</h2>
+<p>Gedit является открытым, бесплатным редактором, доступным для всех операционных систем.</p>
+<p><a href="https://wiki.gnome.org/Apps/Gedit#Download" target="_blank">Скачать его можно здесь</a></p>
+<h2 id="sublime-text-2"><a name="sublime-text-2" class="plugin-anchor" href="http://tutorial.djangogirls.org/ru/installation/index.html#sublime-text-2"><span class="fa fa-link"></span></a>Sublime Text 2</h2>
+<p>Sublime Text - это очень популярный текстовый редактор с бесплатным пробным периодом. Он легко устанавливается и прост в использовании, а также доступен для всех операционных систем.</p>
+<p><a href="http://www.sublimetext.com/2" target="_blank">Скачать его можно здесь</a></p>
+<h2 id="atom"><a name="atom" class="plugin-anchor" href="http://tutorial.djangogirls.org/ru/installation/index.html#atom"><span class="fa fa-link"></span></a>Atom</h2>
+<p>Atom - это новейший текстовый редактор от <a href="http://github.com/" target="_blank">GitHub</a>. Он является бесплатным, открытым, легко устанавливается и прост в использовании. Доступен для Windows, OSX и Linux.</p>
+<p><a href="https://atom.io/" target="_blank">Скачать его можно здесь</a></p>
+<h2 id="%D0%B7%D0%B0%D1%87%D0%B5%D0%BC-%D0%BD%D0%B0%D0%BC-%D0%BD%D1%83%D0%B6%D0%B5%D0%BD-%D1%80%D0%B5%D0%B4%D0%B0%D0%BA%D1%82%D0%BE%D1%80-%D0%BA%D0%BE%D0%B4%D0%B0"><a name="%D0%B7%D0%B0%D1%87%D0%B5%D0%BC-%D0%BD%D0%B0%D0%BC-%D0%BD%D1%83%D0%B6%D0%B5%D0%BD-%D1%80%D0%B5%D0%B4%D0%B0%D0%BA%D1%82%D0%BE%D1%80-%D0%BA%D0%BE%D0%B4%D0%B0" class="plugin-anchor" href="http://tutorial.djangogirls.org/ru/installation/index.html#%D0%B7%D0%B0%D1%87%D0%B5%D0%BC-%D0%BD%D0%B0%D0%BC-%D0%BD%D1%83%D0%B6%D0%B5%D0%BD-%D1%80%D0%B5%D0%B4%D0%B0%D0%BA%D1%82%D0%BE%D1%80-%D0%BA%D0%BE%D0%B4%D0%B0"><span class="fa fa-link"></span></a>Зачем нам нужен редактор кода?</h2>
+<p>Ты можешь спросить - зачем устанавливать отдельную программу для редактирования кода, если можно использовать Word или Notepad.</p>
+<p>Во-первых, код должен должен храниться в виде <strong>простого текста</strong>, а проблема таких программ, как Word или Textedit в том, что они не сохраняют файлы в этом виде, а используют "обогащенный" текст (с форматированием и шрифтами), например, <a href="https://en.wikipedia.org/wiki/Rich_Text_Format" target="_blank">RTF (Rich Text Format)</a>.</p>
+<p>Вторая причина в том, что специализированные редакторы предоставляют множество полезных для программирования возможностей, такие как цветную подсветку кода в зависимости от его смысла и автоматически закрывающиеся кавычки.</p>
+<p>Позже мы увидим все это в действии. Скоро ты начнешь думать о своем редакторе кода как о проверенном любимом инструменте :)</p>
+<h1 id="%D1%83%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BA%D0%B0-git"><a name="%D1%83%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BA%D0%B0-git" class="plugin-anchor" href="http://tutorial.djangogirls.org/ru/installation/index.html#%D1%83%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BA%D0%B0-git"><span class="fa fa-link"></span></a>Установка Git</h1>
+<h3 id="windows"><a name="windows" class="plugin-anchor" href="http://tutorial.djangogirls.org/ru/installation/index.html#windows"><span class="fa fa-link"></span></a>Windows</h3>
+<p>Ты можешь загрузить Git с официального сайта <a href="http://git-scm.com/" target="_blank">git-scm.com</a>. Ты можешь нажимать "дальше дальше дальше" на всех этапах установки за исключением одного: на пятом шаге, который называется "Adjusting your PATH environment" (Настройка системной переменной Path), выберите "Run Git and associated Unix tools from the Windows command-line" (Запуск Git и соответствующих Unix утилит через командную строку Windows, нижняя опция). Все остальные настройки можно оставить по умолчанию. Опция "Checkout Windows-style, commit Unix-style line endings" будет неплохим выбором.</p>
+<h3 id="macos"><a name="macos" class="plugin-anchor" href="http://tutorial.djangogirls.org/ru/installation/index.html#macos"><span class="fa fa-link"></span></a>MacOS</h3>
+<p>Загрузи Git с официального сайта <a href="http://git-scm.com/" target="_blank">git-scm.com</a> и просто следуйте инструкциям по установке.</p>
+<h3 id="linux"><a name="linux" class="plugin-anchor" href="http://tutorial.djangogirls.org/ru/installation/index.html#linux"><span class="fa fa-link"></span></a>Linux</h3>
+<p>Если git ещё не установлен, то он будет доступен через менеджер пакетов, попробуй следующую команду:</p>
+<pre><code>sudo apt-get install git
+# or
+sudo yum install git
+</code></pre><h1 id="%D1%81%D0%BE%D0%B7%D0%B4%D0%B0%D0%BD%D0%B8%D0%B5-%D1%83%D1%87%D1%91%D1%82%D0%BD%D0%BE%D0%B9-%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B8-%D0%BD%D0%B0-github"><a name="%D1%81%D0%BE%D0%B7%D0%B4%D0%B0%D0%BD%D0%B8%D0%B5-%D1%83%D1%87%D1%91%D1%82%D0%BD%D0%BE%D0%B9-%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B8-%D0%BD%D0%B0-github" class="plugin-anchor" href="http://tutorial.djangogirls.org/ru/installation/index.html#%D1%81%D0%BE%D0%B7%D0%B4%D0%B0%D0%BD%D0%B8%D0%B5-%D1%83%D1%87%D1%91%D1%82%D0%BD%D0%BE%D0%B9-%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B8-%D0%BD%D0%B0-github"><span class="fa fa-link"></span></a>Создание учётной записи на GitHub</h1>
+<p>Перейди на <a href="http://www.github.com/" target="_blank">GitHub.com</a> и зарегистрируй новый бесплатный аккаунт.</p>
+<h1 id="%D1%81%D0%BE%D0%B7%D0%B4%D0%B0%D0%BD%D0%B8%D0%B5-%D1%83%D1%87%D1%91%D1%82%D0%BD%D0%BE%D0%B9-%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B8-%D0%BD%D0%B0-pythonanywhere"><a name="%D1%81%D0%BE%D0%B7%D0%B4%D0%B0%D0%BD%D0%B8%D0%B5-%D1%83%D1%87%D1%91%D1%82%D0%BD%D0%BE%D0%B9-%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B8-%D0%BD%D0%B0-pythonanywhere" class="plugin-anchor" href="http://tutorial.djangogirls.org/ru/installation/index.html#%D1%81%D0%BE%D0%B7%D0%B4%D0%B0%D0%BD%D0%B8%D0%B5-%D1%83%D1%87%D1%91%D1%82%D0%BD%D0%BE%D0%B9-%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B8-%D0%BD%D0%B0-pythonanywhere"><span class="fa fa-link"></span></a>Создание учётной записи на PythonAnywhere</h1>
+<p>Теперь нам потребуется создать бесплатный аккаунт уровня "Beginner" на PythonAnywhere.</p>
+<ul>
+<li><a href="https://www.pythonanywhere.com/" target="_blank">www.pythonanywhere.com</a></li>
+</ul>
+<blockquote>
+<p><strong>Примечание</strong>: При выборе имени пользователя, помни что URL блога примет вид <code>yourusername.pythonanywhere.com</code>, так что остановись либо на своём нике, либо на имени, связанном с тематикой блога.</p>
+</blockquote>
+
+
+
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        
+        
+        
+        
+        
+    </div>
+</div>
+
+</body></html>
