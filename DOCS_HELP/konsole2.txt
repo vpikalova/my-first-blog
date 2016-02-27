@@ -1,0 +1,143 @@
+vpikalova@asus:~$ cd djangogirls
+vpikalova@asus:~/djangogirls$ source myvenv/bin/activate
+(myvenv) vpikalova@asus:~/djangogirls$ git status
+На ветке master
+Ваша ветка обновлена в соответствии с «origin/master».
+
+Изменения, которые не в индексе для коммита:
+  (используйте «git add <файл>…», чтобы добавить файл в индекс)
+  (используйте «git checkout -- <файл>…», чтобы отменить изменения
+   в рабочем каталоге)
+
+        изменено:                   blog/views.py
+        изменено:                   mysite/urls.py
+
+Неотслеживаемые файлы:
+  (используйте «git add <файл>…», чтобы добавить в то, что будет включено в коммит)
+
+        blog/templates/
+        blog/urls.py
+        blog/urls.py~
+        blog/views.py~
+        mysite/urls.py~
+
+нет изменений добавленных для коммита
+(используйте «git add» и/или «git commit -a»)
+(myvenv) vpikalova@asus:~/djangogirls$ git add -A
+(myvenv) vpikalova@asus:~/djangogirls$ git status
+На ветке master
+Ваша ветка обновлена в соответствии с «origin/master».
+
+Изменения, которые будут включены в коммит:
+  (используйте «git reset HEAD <файл>…», чтобы убрать из индекса)
+
+        new file:                   blog/templates/blog/post_list.html
+        new file:                   blog/templates/blog/post_list.html~
+        new file:                   blog/urls.py
+        new file:                   blog/urls.py~
+        изменено:                   blog/views.py
+        new file:                   blog/views.py~
+        изменено:                   mysite/urls.py
+        new file:                   mysite/urls.py~
+
+(myvenv) vpikalova@asus:~/djangogirls$ git commit -m "Changed the HTML for the site."
+[master 45e21ef] Changed the HTML for the site.
+ 8 files changed, 70 insertions(+), 1 deletion(-)
+ create mode 100644 blog/templates/blog/post_list.html
+ create mode 100644 blog/templates/blog/post_list.html~
+ create mode 100644 blog/urls.py
+ create mode 100644 blog/urls.py~
+ create mode 100644 blog/views.py~
+ create mode 100644 mysite/urls.py~
+(myvenv) vpikalova@asus:~/djangogirls$ git push
+warning: push.default is unset; its implicit value is changing in
+Git 2.0 from 'matching' to 'simple'. To squelch this message
+and maintain the current behavior after the default changes, use:
+
+  git config --global push.default matching
+
+To squelch this message and adopt the new behavior now, use:
+
+  git config --global push.default simple
+
+When push.default is set to 'matching', git will push local branches
+to the remote branches that already exist with the same name.
+
+In Git 2.0, Git will default to the more conservative 'simple'
+behavior, which only pushes the current branch to the corresponding
+remote branch that 'git pull' uses to update the current branch.
+
+See 'git help config' and search for 'push.default' for further information.
+(the 'simple' mode was introduced in Git 1.7.11. Use the similar mode
+'current' instead of 'simple' if you sometimes use older versions of Git)
+
+Username for 'https://github.com': vpikalova
+Password for 'https://vpikalova@github.com': 
+Counting objects: 16, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (10/10), done.
+Writing objects: 100% (11/11), 1.32 KiB | 0 bytes/s, done.
+Total 11 (delta 5), reused 0 (delta 0)
+To https://github.com/vpikalova/my-first-blog.git
+   fd31802..45e21ef  master -> master
+(myvenv) vpikalova@asus:~/djangogirls$  python manage.py shell
+Python 3.4.3 (default, Jul 28 2015, 18:24:59) 
+[GCC 4.8.4] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+(InteractiveConsole)
+>>>  Post.objects.all()
+  File "<console>", line 1
+    Post.objects.all()
+    ^
+IndentationError: unexpected indent
+>>> Post.objects.all() 
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+NameError: name 'Post' is not defined
+>>> from blog.models import Post
+>>> Post.objects.all()          
+[<Post: My first Post>, <Post: Post2 >, <Post: Post3>, <Post: Мой первый русский пост>]
+>>> Post.objects.create(author=me, title='Sample title', text='Test')
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+NameError: name 'me' is not defined
+>>> Post.objects.create(author=vpikalova, title='Sample title', text='Test')  
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+NameError: name 'vpikalova' is not defined
+>>> from django.contrib.auth.models import User
+>>> User.objects.all()
+[<User: vpikalova>]
+>>> me = User.objects.get(username='vpikalova')
+>>> Post.objects.create(author=me, title='Sample title', text='Test')       
+<Post: Sample title>
+>>> User.objects.all()                                               
+[<User: vpikalova>]
+>>> Post.objects.all()
+[<Post: My first Post>, <Post: Post2 >, <Post: Post3>, <Post: Мой первый русский пост>, <Post: Sample title>]
+>>> Post.objects.filter(author=me)
+[<Post: My first Post>, <Post: Post2 >, <Post: Post3>, <Post: Мой первый русский пост>, <Post: Sample title>]
+>>> Post.objects.filter(title__contains='post') 
+[<Post: My first Post>, <Post: Post2 >, <Post: Post3>]
+>>> from django.utils import timezone
+>>> Post.objects.filter(published_date__lte=timezone.now())
+[<Post: My first Post>, <Post: Post2 >, <Post: Post3>, <Post: Мой первый русский пост>]
+>>> post = Post.objects.get(title="Sample title")
+>>> post.publish()
+>>>  Post.objects.filter(published_date__lte=timezone.now())
+  File "<console>", line 1
+    Post.objects.filter(published_date__lte=timezone.now())
+    ^
+IndentationError: unexpected indent
+>>> Post.objects.filter(published_date__lte=timezone.now()) 
+[<Post: My first Post>, <Post: Post2 >, <Post: Post3>, <Post: Мой первый русский пост>, <Post: Sample title>]
+>>> Post.objects.order_by('created_date')
+[<Post: My first Post>, <Post: Post2 >, <Post: Post3>, <Post: Мой первый русский пост>, <Post: Sample title>]
+>>> Post.objects.order_by('-created_date')
+[<Post: Sample title>, <Post: Мой первый русский пост>, <Post: Post3>, <Post: Post2 >, <Post: My first Post>]
+>>> Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
+[<Post: My first Post>, <Post: Post2 >, <Post: Post3>, <Post: Мой первый русский пост>, <Post: Sample title>]
+>>> Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
+[<Post: My first Post>, <Post: Post2 >, <Post: Post3>, <Post: Мой первый русский пост>, <Post: Sample title>]
+>>> exit()
+(myvenv) vpikalova@asus:~/djangogirls$ 
